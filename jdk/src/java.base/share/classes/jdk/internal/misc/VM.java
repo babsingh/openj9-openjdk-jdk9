@@ -298,6 +298,7 @@ public class VM {
      */
     public static ClassLoader latestUserDefinedLoader() {
         ClassLoader loader = latestUserDefinedLoader0();
+	System.out.println("latestUserDefinedLoader: classLoader = " + loader);
         return loader != null ? loader : ClassLoader.getPlatformClassLoader();
     }
 
