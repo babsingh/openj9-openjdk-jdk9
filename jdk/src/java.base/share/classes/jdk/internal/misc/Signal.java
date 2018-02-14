@@ -209,7 +209,8 @@ public final class Signal {
     /* Called by the VM to execute Java signal handlers. */
     private static void dispatch(final int number) {
         final Signal sig = signals.get(number);
-        final Signal.Handler handler = handlers.get(sig);
+        System.out.println("signal number = " + number + " signal = " + sig);
+	final Signal.Handler handler = handlers.get(sig);
 
         Runnable runnable = new Runnable () {
             public void run() {
